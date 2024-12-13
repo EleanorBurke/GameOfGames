@@ -34,7 +34,7 @@
     - `GetInput.java`: Handles user input validation and error handling.
 
 ## Deployment 
-### Steps for Deployment
+### Steps for Deployment Mac
 
 1. **Download or Clone the Repository**  
     - Download the project as a ZIP file from the repository or clone it using Git:
@@ -45,7 +45,7 @@
 2. **Navigate to the Project Directory** 
     - Open a terminal/command prompt and navigate to the directory containing the source files:
     ```bash
-    cd path/to/project
+    cd GameOfGames/
     ```
 
 3. **Compile the Java Files**  
