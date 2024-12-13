@@ -39,7 +39,7 @@
 1. **Download or Clone the Repository**  
     - Download the project as a ZIP file from the repository or clone it using Git:
    ```bash
-   git clone <repository-url>
+   git clone <https://github.com/EleanorBurke/GameOfGames.git>
    ```
 
 2. **Navigate to the Project Directory** 
