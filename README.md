@@ -34,4 +34,34 @@
     - `GetInput.java`: Handles user input validation and error handling.
 
 ## Deployment 
-**WRITE LATER**
+### Steps for Deployment
+
+1. **Download or Clone the Repository**  
+    - Download the project as a ZIP file from the repository or clone it using Git:
+   ```bash
+   git clone <repository-url>
+   ```
+
+2. **Navigate to the Project Directory** 
+    - Open a terminal/command prompt and navigate to the directory containing the source files:
+    ```bash
+    cd path/to/project
+    ```
+
+3. **Compile the Java Files**  
+    - Compile the .java files using the following command:
+    ```bash
+    javac *.java 
+    ```
+    - This will generate .class files in the same directory.
+
+4. **Run the Application** Run the main class using:
+    ```bash
+    java PlayGames
+    ```
+
+5. **Running with an IDE**
+    - Open the project folder in your preferred IDE.
+    - Ensure the project structure and dependencies are correctly imported.
+    - Run the PlayGames class through the IDE's "Run" or "Play" button.
+
