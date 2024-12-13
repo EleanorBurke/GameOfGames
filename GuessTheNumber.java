@@ -35,9 +35,9 @@ public class GuessTheNumber {
                 
                 try {
                     playerGuess = Integer.parseInt(playerInput);
-
-                    if (playerGuess < 1 || playerGuess > 100) {
-                        System.out.println("Invalid input. Please enter a number between 1 and 100.");
+                    
+                    if (!GetInput.validateNumRange(1, 100, playerGuess)) {
+                        // System.out.println("Invalid input. Please enter a number between 1 and 100.");
                         continue;
                     }
 
@@ -50,7 +50,7 @@ public class GuessTheNumber {
                         System.out.println("Too high. Try again.");
                     }
                 } catch (NumberFormatException e) {
-                    System.out.println("Invalid input. Please enter a valid number.");
+                    System.out.println("Invalid input. Please enter a valid number between range: 1-100.");
                 }
             }
 

@@ -18,13 +18,12 @@ public class GetInput {
         return false;
     }
 
-
     /**
      *  This method validates string inputs by comparing input to the 2 expected values
      * 
      * @param Exp1  The 1st valid entry
      * @param Exp2  The 2nd valid entry
-     * @param input The user input that need to be validated 
+     * @param input The user input that needs to be validated 
      * @return      Returns true if input is valid and false if not
      */
     public static boolean validateString(String Exp1, String Exp2, String input){
@@ -38,5 +37,27 @@ public class GetInput {
         return false;
     }
 
+    /**
+     * 
+     * @param lowBound  The int lower bound
+     * @param topBound  The int upper bound
+     * @param input     The user input that needs to be validated 
+     * @return          Returns true if input is valid and false if not
+     */
+    public static boolean validateNumRange(int lowBound, int topBound, int input){
+        
+        if(input >= lowBound && input <= topBound){
+            return true;
+        } else {
+            System.out.println("Invalid input. Please enter a valid number between range: " + lowBound + "-" + topBound);
+        }
+        
+        return false;
+    }
 
+
+    public static void main(String[] args) {
+        System.out.print(validateNumRange(1, 10, 1000000));
+    }
 }
+

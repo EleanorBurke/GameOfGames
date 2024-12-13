@@ -38,7 +38,7 @@ public class CoinFlip {
 
             // If test is true flip is shown to user
             if (test) {
-                System.out.println("Coin Flip result: " + flip);
+                System.out.println("TEST: Coin Flip result: " + flip);
             }
 
             // Prompts users for guess until valid value is entered
@@ -57,8 +57,10 @@ public class CoinFlip {
             if (flip.equals(guess)) {
                 System.out.println("You Wons!");
                 playerScore += 1;
+                if(test) { System.out.println("TEST: score increased by 1");}
             } else {
                 System.out.println("You Lost!");
+                if(test) { System.out.println("TEST: score NOT increased");}
             }
 
             // Prompts users for guess until valid value is entered
