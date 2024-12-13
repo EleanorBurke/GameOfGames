@@ -15,7 +15,7 @@ public class CoinFlip {
     private String flip = "H";
 
     // Array records the score player and computer
-    public int playerScore = 0;
+    private int playerScore = 0;
 
     // METHODS
     /**
@@ -45,30 +45,37 @@ public class CoinFlip {
             while (true) {
                 System.out.println("Player Choose Heads or Tails (H/T)");
                 String playerInput = input.nextLine();
-                if(GetInput.validateString("H", "T", playerInput)){
+                if (playerInput.equals("N")) {
+                    System.out.println("Game Over.");
+                    return playerScore;
+                } else if (GetInput.validateString("H", "T", playerInput)) {
                     guess = playerInput;
                     break;
                 }
             }
 
-            // Shows player coin flip outcome and wether or not they won and 
-            // updates playerScore accordingly 
+            // Shows player coin flip outcome and wether or not they won and
+            // updates playerScore accordingly
             System.out.println("Coin flip: " + flip);
             if (flip.equals(guess)) {
                 System.out.println("You Wons!");
                 playerScore += 1;
-                if(test) { System.out.println("TEST: score increased by 1");}
+                if (test) {
+                    System.out.println("TEST: score increased by 1");
+                }
             } else {
                 System.out.println("You Lost!");
-                if(test) { System.out.println("TEST: score NOT increased");}
+                if (test) {
+                    System.out.println("TEST: score NOT increased");
+                }
             }
 
             // Prompts users for guess until valid value is entered
             while (true) {
                 System.out.println("Play Again? (Y/N)");
                 String playerInput = input.nextLine();
-                if(GetInput.validateString("Y", "N", playerInput)){
-                    if (playerInput.equals("Y")){
+                if (GetInput.validateString("Y", "N", playerInput)) {
+                    if (playerInput.equals("Y")) {
                         playAgain = true;
                     } else {
                         playAgain = false;
