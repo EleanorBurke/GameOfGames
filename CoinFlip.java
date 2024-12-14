@@ -1,12 +1,23 @@
 import java.util.Scanner; // Import the Scanner class
 import java.util.Random; // Import the Random class
 
+/**
+ * The CoinFlip class implements a coin-flipping game where a player
+ * guesses the outcome of a coin flip (Heads or Tails).
+ *
+ * The game supports two modes:
+ * Player Mode: Standard gameplay where the coin flip result is hidden.
+ * Test Mode: Displays the coin flip result for debugging and testing purposes.
+ *
+ * @author: Eleanor Burke
+ * @version: 1.0
+ *           Date: 2024-12-14
+ */
 public class CoinFlip {
 
     // VARIABLES
-    // If test is true the testing mode is activated
-    // meaning the user will see the computers 'moves'
-    private boolean test = true;
+    // If test is true the testing mode is activated -- default is false
+    private boolean test = false;
     private Random rand = new Random();
 
     // These var will be updated according to player's guess and the computer's
@@ -14,8 +25,19 @@ public class CoinFlip {
     private String guess = "H";
     private String flip = "H";
 
-    // Array records the score player and computer
+    // Integer records the score player
     private int playerScore = 0;
+
+    // CONSTRUCTOR
+    /**
+     * Constructs a new CoinFlip game.
+     *
+     * @param test a boolean value that determines if the game runs in test mode.
+     *             If true, the coin flip result is displayed to the user.
+     */
+    public CoinFlip(boolean test) {
+        this.test = test;
+    }
 
     // METHODS
     /**
@@ -47,6 +69,7 @@ public class CoinFlip {
                 String playerInput = input.nextLine();
                 if (playerInput.equals("N")) {
                     System.out.println("Game Over.");
+                    System.out.println("Player Score: " + playerScore);
                     return playerScore;
                 } else if (GetInput.validateString("H", "T", playerInput)) {
                     guess = playerInput;
@@ -91,10 +114,9 @@ public class CoinFlip {
     }
 
     public static void main(String[] args) {
-        CoinFlip game = new CoinFlip();
+        CoinFlip game = new CoinFlip(true);
 
         game.play();
-
     }
 
 }
