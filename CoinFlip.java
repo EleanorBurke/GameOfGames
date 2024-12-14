@@ -31,6 +31,13 @@ public class CoinFlip {
     // CONSTRUCTOR
     /**
      * Constructs a new CoinFlip game.
+     */
+    public CoinFlip() {
+        test = false;
+    }
+
+    /**
+     * Constructs a new CoinFlip game.
      *
      * @param test a boolean value that determines if the game runs in test mode.
      *             If true, the coin flip result is displayed to the user.
