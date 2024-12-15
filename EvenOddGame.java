@@ -6,7 +6,7 @@ public class EvenOddGame {
     private static int evenScore = 0;
     private static int oddScore = 0;
 
-    public static void main(String[] args) {
+    public void main() {
         Scanner scanner = new Scanner(System.in);
         boolean playAgain = true;
 

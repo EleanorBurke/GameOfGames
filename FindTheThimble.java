@@ -1,4 +1,4 @@
-package org.example;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -7,7 +7,7 @@ import java.util.Scanner;
  */
 
 public class FindTheThimble {
-    boolean testMode = false;
+    boolean testMode;
     int playerScore = 0;
     int hostScore = 0;
 
@@ -17,7 +17,15 @@ public class FindTheThimble {
     /**
      * Default constructor for the FindTheThimble class.
      */
-    public FindTheThimble() {}
+    public FindTheThimble() {
+        this.testMode = false;
+    }
+    /**
+     * Constructor for the FindTheThimble class to set the test mode to testMode.
+     */
+    public FindTheThimble(boolean testMode) {
+        this.testMode = testMode;
+    }
 
     /**
      * Randomly selects a cup where the thimble is hidden.

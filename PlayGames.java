@@ -1,4 +1,3 @@
-package org.example;
 
 import java.util.Scanner;
 
@@ -78,22 +77,26 @@ public class PlayGames {
     public boolean playAGame(int gameNumber) {
         switch (gameNumber) {
             case 1:
-                //FindTheThimble findTheThimble = new FindTheThimble();
-                //int[] playerThenHostScore = findTheThimble.playFindTheThimble();
-                //overallPlayerScore += playerThenHostScore[0];
-                //overallHostScore += playerThenHostScore[1];
+                FindTheThimble findTheThimble = new FindTheThimble();
+                int[] playerThenHostScore = findTheThimble.playFindTheThimble();
+                overallPlayerScore += playerThenHostScore[0];
+                overallHostScore += playerThenHostScore[1];
                 break;
             case 2:
-                //CoinFlip coinFlip = new CoinFlip();
-                //overallPlayerScore += coinFlip.play();
+                CoinFlip coinFlip = new CoinFlip();
+                overallPlayerScore += coinFlip.play();
                 break;
             case 3:
-                //GuessTheNumber guessTheNumber = new GuessTheNumber();
-                //overallPlayerScore += guessTheNumber.play();
+                GuessTheNumber guessTheNumber = new GuessTheNumber();
+                overallPlayerScore += guessTheNumber.play();
                 break;
             case 4:
+                EvenOddGame evenOddGame = new EvenOddGame();
+                evenOddGame.main();
                 break;
             case 5:
+                RedThreadGame redThreadGame = new RedThreadGame();
+                redThreadGame.main();
                 break;
             default:
                 return false;
@@ -122,5 +125,10 @@ public class PlayGames {
             }
         }
     }
+    public static void main(String[] args) {
+        PlayGames game = new PlayGames();
+        game.mainMenu();
+    }
 
 }
+

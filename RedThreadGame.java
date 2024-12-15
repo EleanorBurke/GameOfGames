@@ -8,7 +8,7 @@ public class RedThreadGame {
     private static int player1Score = 0;  // Player 1's score
     private static int player2Score = 0;  // Player 2's score
 
-    public static void main(String[] args) {
+    public void main() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Find the Red Thread Game!");
 

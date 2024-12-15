@@ -8,13 +8,14 @@ public class GuessTheNumber {
     private Random rand = new Random(); // Random number generator
     private int numberToGuess; // The number the player needs to guess
     private int playerGuess; // The player's current guess
+    private int playerScore = 0;
 
     // METHODS
 
     /**
      * Starts the Guess the Number game.
      */
-    public void play() {
+    public int play() {
         boolean playAgain = true;
         Scanner input = new Scanner(System.in);
 
@@ -44,6 +45,7 @@ public class GuessTheNumber {
                     if (playerGuess == numberToGuess) {
                         System.out.println("Congratulations! You guessed the number.");
                         numberGuessed = true;
+                        playerScore++;
                     } else if (playerGuess < numberToGuess) {
                         System.out.println("Too low. Try again.");
                     } else {
@@ -69,6 +71,7 @@ public class GuessTheNumber {
                 }
             }
         }
+        return playerScore;
     }
 
     public static void main(String[] args) {
